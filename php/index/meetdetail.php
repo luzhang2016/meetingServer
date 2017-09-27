@@ -9,8 +9,10 @@ if($mid){
     $output=sql_execute($sql);
     $sql="SELECT * FROM meetingprocess WHERE pmid = $mid";
     $output[0]["MeetingAgenda"]=sql_execute($sql);
-    $sql="SELECT SignInFlag from memberlist WHERE cmid = $mid AND Mobile=$phone";
-    $output[0]["SignInFlag"]=sql_execute($sql)[0]["SignInFlag"];
+    if($phone){
+        $sql="SELECT SignInFlag from memberlist WHERE cmid = $mid AND Mobile=$phone";
+        $output[0]["SignInFlag"]=sql_execute($sql)[0]["SignInFlag"];
+    }
     $output["msg"]="ok";
 }else{
     $output["msg"]="err";

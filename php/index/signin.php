@@ -3,8 +3,8 @@ header("Content-Type:application/json");
 header("Access-Control-Allow-origin:*");
 require("../init.php");
     @$mid=$_REQUEST["mid"];
-    @$phone=$_REQUEST["phone"];
-    @$place=$_REQUEST["result"];
+    @$phone=$_REQUEST["mobile"];
+    @$place=$_REQUEST["signInAddr"];
 if($mid&&$phone&&$place){
     $sql="SELECT COUNT(*) FROM memberlist WHERE cmid=$mid";
     $memberTotal=sql_execute($sql);

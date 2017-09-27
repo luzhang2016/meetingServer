@@ -60,10 +60,14 @@ CREATE TABLE attachment(
     DownloadTimes INT,
     Flag INT
 );
-INSERT INTO attachment VALUES(null,1,"一会议资料","word","http://www.baidu.com","张三","2017-10-14 8:00:00",654654,0,0);
-INSERT INTO attachment VALUES(null,1,"一会议记录","word","http://www.baidu.com","张三三","2017-10-14 8:00:00",654654,0,1);
-INSERT INTO attachment VALUES(null,2,"一会议资料","word","http://www.baidu.com","张三","2017-10-14 8:00:00",654654,0,0);
-INSERT INTO attachment VALUES(null,2,"一会议记录","word","http://www.baidu.com","张三三","2017-10-14 8:00:00",654654,0,1);
+INSERT INTO attachment VALUES(null,1,"一会议资料","doc","http://www.baidu.com","张三","2017-10-14 8:00:00",654654,0,0);
+INSERT INTO attachment VALUES(null,1,"一会议资料","doc","http://www.baidu.com","张三","2017-10-14 8:00:00",654654,0,0);
+INSERT INTO attachment VALUES(null,1,"一会议记录","doc","http://www.baidu.com","张三三","2017-10-14 8:00:00",654654,0,1);
+INSERT INTO attachment VALUES(null,1,"一会议记录","doc","http://www.baidu.com","张三三","2017-10-14 8:00:00",654654,0,1);
+INSERT INTO attachment VALUES(null,2,"2会议资料","doc","http://www.baidu.com","张三","2017-10-14 8:00:00",654654,0,0);
+INSERT INTO attachment VALUES(null,2,"2会议资料","doc","http://www.baidu.com","张三","2017-10-14 8:00:00",654654,0,0);
+INSERT INTO attachment VALUES(null,2,"2会议记录","doc","http://www.baidu.com","张三三","2017-10-14 8:00:00",654654,0,1);
+INSERT INTO attachment VALUES(null,2,"2会议记录","doc","http://www.baidu.com","张三三","2017-10-14 8:00:00",654654,0,1);
 
 #创建附件下载详情表
 CREATE TABLE downloader(
@@ -72,22 +76,38 @@ CREATE TABLE downloader(
     DownloadUser VARCHAR(8),
     DownloadTime VARCHAR(20)
 );
-INSERT INTO downloader VALUES(null,1,"王府","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,1,"张三","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,1,"两点开","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,1,"鹅肉","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,1,"玩儿","2017-10-14 8:00:00");
-INSERT INTO downloader VALUES(null,2,"往前地","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,2,"张三","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,2,"地方","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,2,"发多少","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,2,"的的","2017-10-14 8:00:00");
-INSERT INTO downloader VALUES(null,3,"往前地","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,3,"张三","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,3,"地方","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,3,"发多少","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,3,"的的","2017-10-14 8:00:00");
-INSERT INTO downloader VALUES(null,4,"往前地","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,4,"张三","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,4,"地方","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,4,"发多少","2017-10-14 8:00:00");
 INSERT INTO downloader VALUES(null,4,"的的","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,5,"张三","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,5,"地方","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,5,"发多少","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,5,"的的","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,6,"张三","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,6,"地方","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,6,"发多少","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,6,"的的","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,7,"张三","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,7,"地方","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,7,"发多少","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,7,"的的","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,8,"张三","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,8,"地方","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,8,"发多少","2017-10-14 8:00:00");
+INSERT INTO downloader VALUES(null,8,"的的","2017-10-14 8:00:00");
 
 #创建会议议程表
 CREATE TABLE meetingprocess (
@@ -101,10 +121,19 @@ CREATE TABLE meetingprocess (
     Summary VARCHAR(128)
 );
 INSERT INTO meetingprocess VALUES (null,1,"2017-10-14 08:00","2017-10-14 08:30","主持人开场1","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
-INSERT INTO meetingprocess VALUES (null,1,"09:00","09:30","主持人开场2","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
-INSERT INTO meetingprocess VALUES (null,1,"09:30","10:30","主持人开场3","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
-INSERT INTO meetingprocess VALUES (null,1,"12:30","13:30","主持人开场4","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
+INSERT INTO meetingprocess VALUES (null,1,"2017-10-14 09:00","2017-10-14 09:30","主持人开场2","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
+INSERT INTO meetingprocess VALUES (null,1,"2017-10-14 09:30","2017-10-14 10:30","主持人开场3","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
+INSERT INTO meetingprocess VALUES (null,1,"2017-10-14 12:30","2017-10-14 13:30","主持人开场4","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
 INSERT INTO meetingprocess VALUES (null,2,"2017-10-14 08:00","2017-10-14 08:30","主持人开场1","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
-INSERT INTO meetingprocess VALUES (null,2,"09:00","09:30","主持人开场2","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
-INSERT INTO meetingprocess VALUES (null,2,"09:30","10:30","主持人开场3","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
-INSERT INTO meetingprocess VALUES (null,2,"12:30","13:30","主持人开场4","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
+INSERT INTO meetingprocess VALUES (null,2,"2017-10-14 09:00","2017-10-14 09:30","主持人开场2","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
+INSERT INTO meetingprocess VALUES (null,2,"2017-10-14 09:30","2017-10-14 10:30","主持人开场3","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
+INSERT INTO meetingprocess VALUES (null,2,"2017-10-14 12:30","2017-10-14 13:30","主持人开场4","张三","今日会议内容今日会议内容今日会议内容","这是会议摘要");
+
+#创建用户列表
+CREATE TABLE meetingusers(
+    uid INT PRIMARY KEY AUTO_INCREMENT,
+    uname VARCHAR(10),
+    upwd VARCHAR(10),
+    uphone BigINT
+);
+INSERT INTO meetingusers VALUES(null,"张三","123123",13806619662 );
